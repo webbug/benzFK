@@ -38,24 +38,28 @@
 				 	<div class="ka_con_bao">
 				 		<div class="ka_con dj_kk1">
 				        	<div class="js_text">300</div>
+				        	<div class="knum">652&nbsp;张</div>
 				        	<div class="yxq">有效期至：2016/04/23－2016/08/32</div>
 				        </div>
 				 	</div>
 			        <div class="ka_con_bao">
 				 		<div class="ka_con dj_kk1">
 				        	<div class="js_text">300</div>
+				        	<div class="knum">652&nbsp;张</div>
 				        	<div class="yxq">有效期至：2016/04/23－2016/08/32</div>
 				        </div>
 				 	</div>
 				 	<div class="ka_con_bao">
 				 		<div class="ka_con dj_kk1">
 				        	<div class="js_text">300</div>
+				        	<div class="knum">652&nbsp;张</div>
 				        	<div class="yxq">有效期至：2016/04/23－2016/08/32</div>
 				        </div>
 				 	</div>
 				 	<div class="ka_con_bao">
 				 		<div class="ka_con dj_kk1">
 				        	<div class="js_text">300</div>
+				        	<div class="knum">652&nbsp;张</div>
 				        	<div class="yxq">有效期至：2016/04/23－2016/08/32</div>
 				        </div>
 				 	</div>
@@ -234,10 +238,22 @@
            
            
             /*下拉*/
-            Zepto(document).on('touchstart',".xl_ul",function(){
-               Zepto(this).toggleClass('togleauo');
+            Zepto(document).on('touchstart',".xl_ul .ckval",function(event){
+            	Zepto('.xl_ul').toggleClass('togleauo');
             });
             
+
+            
+            Zepto('body').bind('touchstart',function(e){
+            	if(!$(e.target).hasClass("ckval")){
+			        if(Zepto('.xl_ul').hasClass('togleauo')){
+	            		Zepto('.xl_ul').removeClass('togleauo');
+	            	}
+			    }
+            	
+            });
+            
+        
             
             Zepto(document).on('touchstart',".xl_ul li",function(){
                if(!Zepto(this).hasClass('ckval')){

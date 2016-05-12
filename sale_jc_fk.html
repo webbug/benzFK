@@ -38,31 +38,28 @@
 				 	<div class="ka_con_bao">
 				 		<div class="ka_con kk1_yc">
 				        	<div class="fk_jc_title">梅赛德斯-奔驰E级计次卡</div>
+				        	<div class="knum">652&nbsp;张</div>
 				        	<div class="fk_cs"><span>8</span>次</div>
 				        	<div class="yxq yxq2">有效期至：2016/04/23－2016/08/32</div>
 				        </div>
 				 	</div>
 				 	<div class="ka_con_bao">
-				 		<div class="ka_con kk1_yc">
+				 		<div class="ka_con kk1_yc2">
 				        	<div class="fk_jc_title">梅赛德斯-奔驰E级计次卡</div>
+				        	<div class="knum">652&nbsp;张</div>
 				        	<div class="fk_cs"><span>8</span>次</div>
 				        	<div class="yxq yxq2">有效期至：2016/04/23－2016/08/32</div>
 				        </div>
 				 	</div>
 				 	<div class="ka_con_bao">
-				 		<div class="ka_con kk1_yc">
+				 		<div class="ka_con kk1_yc3">
 				        	<div class="fk_jc_title">梅赛德斯-奔驰E级计次卡</div>
+				        	<div class="knum">652&nbsp;张</div>
 				        	<div class="fk_cs"><span>8</span>次</div>
 				        	<div class="yxq yxq2">有效期至：2016/04/23－2016/08/32</div>
 				        </div>
 				 	</div>
-				 	<div class="ka_con_bao">
-				 		<div class="ka_con kk1_yc">
-				        	<div class="fk_jc_title">梅赛德斯-奔驰E级计次卡</div>
-				        	<div class="fk_cs"><span>8</span>次</div>
-				        	<div class="yxq yxq2">有效期至：2016/04/23－2016/08/32</div>
-				        </div>
-				 	</div>
+				 	
 			        
 			         
 			                  
@@ -238,8 +235,19 @@
            
            
             /*下拉*/
-            Zepto(document).on('touchstart',".xl_ul",function(){
-               Zepto(this).toggleClass('togleauo');
+             Zepto(document).on('touchstart',".xl_ul .ckval",function(event){
+            	Zepto('.xl_ul').toggleClass('togleauo');
+            });
+            
+
+            
+            Zepto('body').bind('touchstart',function(e){
+            	if(!$(e.target).hasClass("ckval")){
+			        if(Zepto('.xl_ul').hasClass('togleauo')){
+	            		Zepto('.xl_ul').removeClass('togleauo');
+	            	}
+			    }
+            	
             });
             
             
